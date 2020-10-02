@@ -31,5 +31,6 @@ jobs:
           wget ${OMNISCI_FILE_URL}
           chmod +x ${OMNISCI_FILE}
           ./${OMNISCI_FILE} -b
+          ls -R /Users/runner/omnisci
           # test
           python -c "import ibis; import pymapd; import intake;"
