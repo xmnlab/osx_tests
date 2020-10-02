@@ -30,4 +30,6 @@ jobs:
           export OMNISCI_FILE_URL=https://github.com/Quansight/omnisci-datascience-installer/releases/download/${OMNISCI_VERSION}/${OMNISCI_FILE}
           wget ${OMNISCI_FILE_URL}
           chmod +x ${OMNISCI_FILE}
-          ./${OMNISCI_FILE} -b -t
+          ./${OMNISCI_FILE} -b
+          # test
+          python -c "import ibis; import pymapd; import intake;"
